@@ -1,3 +1,52 @@
+
+### Snake game steps
+
+
+1. Fetch github users profile image
+
+2. Create basic HTML page
+
+Logo (it could anchor tag that on click runs the reset() function - acting like a home button?)
+
+ Template/ React render():
+ 
+ Profile image (Name) - response from API
+ 
+ Form/input box with submit button - fetch request
+
+
+
+ Create Grid
+ - flexbox : container 
+ - containing a `snake-grid` div
+ - containing a grid of `div-items` 
+
+ Snake (With profile picture)
+
+ Snake food
+
+
+
+4. Append profile image to snake head
+
+### Strecth Goal
+
+Append a random follower profile image to the food item
+
+Reset button
+
+
+
+
+
+
+
+
+
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
@@ -66,3 +115,5 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+
