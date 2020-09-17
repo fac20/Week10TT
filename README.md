@@ -1,6 +1,4 @@
-
 ### Snake game steps
-
 
 1. Fetch github users profile image
 
@@ -8,24 +6,21 @@
 
 Logo (it could anchor tag that on click runs the reset() function - acting like a home button?)
 
- Template/ React render():
- 
- Profile image (Name) - response from API
- 
- Form/input box with submit button - fetch request
+Template/ React render():
 
+Profile image (Name) - response from API
 
+Form/input box with submit button - fetch request
 
- Create Grid
- - flexbox : container 
- - containing a `snake-grid` div
- - containing a grid of `div-items` 
+Create Grid
 
- Snake (With profile picture)
+- flexbox : container
+- containing a `snake-grid` div
+- containing a grid of `div-items`
 
- Snake food
+Snake (With profile picture)
 
-
+Snake food
 
 4. Append profile image to snake head
 
@@ -35,24 +30,18 @@ Append a random follower profile image to the food item
 
 Reset button
 
-
 ### Workshops that could be helpful
 
-1. Handle forms and inputs in React 
-https://github.com/oliverjam/learn-react/tree/main/05-transform-the-form
+1. Handle forms and inputs in React
+   https://github.com/oliverjam/learn-react/tree/main/05-transform-the-form
 
 2. Working with the github API in React
 
 https://github.com/sofiapoh/react-dynamic-data-workshop
 
+## Wireframe :
 
-
-
-
-
-
-
-
+[](https://whimsical.com/N6EzDrGo1RbQ1GXMGJscGy)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -99,28 +88,6 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 
 To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
 ### Deployment
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
-
-
