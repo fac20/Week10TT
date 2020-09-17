@@ -1,8 +1,47 @@
+### Snake game steps
 
-## Wireframe : 
+1. Fetch github users profile image
+
+2. Create basic HTML page
+
+Logo (it could anchor tag that on click runs the reset() function - acting like a home button?)
+
+Template/ React render():
+
+Profile image (Name) - response from API
+
+Form/input box with submit button - fetch request
+
+Create Grid
+
+- flexbox : container
+- containing a `snake-grid` div
+- containing a grid of `div-items`
+
+Snake (With profile picture)
+
+Snake food
+
+4. Append profile image to snake head
+
+### Strecth Goal
+
+Append a random follower profile image to the food item
+
+Reset button
+
+### Workshops that could be helpful
+
+1. Handle forms and inputs in React
+   https://github.com/oliverjam/learn-react/tree/main/05-transform-the-form
+
+2. Working with the github API in React
+
+https://github.com/sofiapoh/react-dynamic-data-workshop
+
+## Wireframe :
 
 [](https://whimsical.com/N6EzDrGo1RbQ1GXMGJscGy)
-
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -49,10 +88,6 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 
 To learn React, check out the [React documentation](https://reactjs.org/).
 
-
-
 ### Deployment
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-

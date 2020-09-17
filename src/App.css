@@ -1,9 +1,27 @@
+:root {
+  --primary-font-colour: hsl(177, 85%, 22%);
+  --font-colour: hsl(177, 70%, 41%);
+  --bg-colour: hsl(180, 38%, 91%);
+  --disabled-colour: hsl(0, 0%, 37%);
+  --title-font: "PT Serif", serif;
+  --main-font: "arial";
+}
+
 .App {
   text-align: center;
 }
 
+#avatar {
+  height: 40vmin;
+  box-shadow: 0 4px 8px 0 hsla(0, 0%, 0%, 0.2),
+    0 6px 20px 0 hsla(0, 0%, 0%, 0.19);
+  border-radius: 50%;
+}
+
 .App-logo {
   height: 40vmin;
+  box-shadow: 0 4px 8px 0 hsla(0, 0%, 0%, 0.2),
+    0 6px 20px 0 hsla(0, 0%, 0%, 0.19);
   pointer-events: none;
 }
 
@@ -13,7 +31,7 @@
   }
 }
 
-.App-header {
+/* .App-header {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -22,7 +40,7 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-}
+} */
 
 .App-link {
   color: #61dafb;
