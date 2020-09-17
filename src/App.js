@@ -7,16 +7,25 @@ import { getData } from './utils/dataapi';
 
 function App() {
   const [userData, setUserData] = React.useState(null);
+  const [userInput, setUserInput] = React.useState('');
   
-  const Username = "trishtracking";
+  // const username = "trishtracking"; << hardcoded username for api string now changed to userInput from the form
   React.useEffect(() => {
-    const url = `https://api.github.com/users/${Username}`
+    const url = `https://api.github.com/users/${userInput}`
     getData(url).then((data) => setUserData(data));
   }, []);
   if (!userData) {
     return <h3>.....Snake Loading</h3>
   }
 
+  // Targets the value inputted into the search field
+  const handleSearch = (event) => {
+    setUserInput(event.target.value)
+  };
+ // Need to handle the submit to trigger a fetch request  >>> tutorial with time stamp https://youtu.be/aGiPMygfMM4?t=796
+  const handleSubmit = () => {
+
+  }
 
   return (
     <div className="App">
@@ -32,7 +41,8 @@ function App() {
           <h1 id="name">namevariable</h1> 
           <fieldset>
             <label forhtml='githubId' name='githubId'></label>
-            <input type="textarea" placeholder="Enter your GitHub ID"/>
+            {/* {onchange} run handleSearch which targets the input value */}
+            <input type="textarea" placeholder="Enter your GitHub ID" onChange={handleSearch}/>
             <button type="submit">Snake Me!</button>
           </fieldset>
         </section>

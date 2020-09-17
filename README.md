@@ -36,7 +36,14 @@ Append a random follower profile image to the food item
 Reset button
 
 
+### Workshops that could be helpful
 
+1. Handle forms and inputs in React 
+https://github.com/oliverjam/learn-react/tree/main/05-transform-the-form
+
+2. Working with the github API in React
+
+https://github.com/sofiapoh/react-dynamic-data-workshop
 
 
 
