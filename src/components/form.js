@@ -1,5 +1,5 @@
 import React from "react";
-import "../index.css";
+import "../App.css";
 
 const FormSection = ({ setUserInput }) => {
   return (
@@ -9,19 +9,17 @@ const FormSection = ({ setUserInput }) => {
         return setUserInput(event.target.username.value);
       }}
     >
-      <fieldset>
-        <label forhtml="githubId" name="githubId"></label>
-        {/* {onchange} run handleSearch which targets the input value */}
-        <input
-          id="username"
-          name="username"
-          type="textarea"
-          placeholder="Enter your GitHub ID"
-        />
-        <button type="submit" id="submit">
-          Snake Me!
-        </button>
-      </fieldset>
+      <label forhtml="githubId" name="githubId"></label>
+      {/* {onchange} run handleSearch which targets the input value */}
+      <input
+        id="username"
+        name="username"
+        type="textarea"
+        placeholder="Enter your GitHub ID"
+      />
+      <button type="submit" id="submit">
+        React is my snack
+      </button>
     </form>
   );
 };

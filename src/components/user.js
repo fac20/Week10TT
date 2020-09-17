@@ -1,24 +1,30 @@
 import React from "react";
-import "../index.css";
+import "../App.css";
 import getData from "../utils/dataapi.js";
 
 const User = (props) => {
-  const [userData, setUserData] = React.useState(null);
   // const [userInput, setUserInput] = React.useState("");
   React.useEffect(() => {
     getData(props.userInput).then((data) => {
-      return setUserData(data);
+      return props.setUserData(data);
     }, []);
   });
 
-  if (!userData) {
-    return <h3>.....Snake Loading</h3>;
+  if (!props.userData) {
+    return (
+      <img alt="Original snake logo easter egg" src="../snake-game-logo.png" />
+    );
   }
-  console.log(userData);
+  console.log(props.userData);
+  console.log(props.userData.avatar_url);
   return (
     <section id="profile-card">
-      <img id="avatar" alt="Githib user avatar" src={userData.avatar_url} />
-      <h1 id="name">{userData.login}</h1>
+      <img
+        id="avatar"
+        alt="Githib user avatar"
+        src={props.userData.avatar_url}
+      />
+      <h1 id="name">Hungry, {props.userData.login}?</h1>
     </section>
   );
 };
