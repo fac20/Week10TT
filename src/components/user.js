@@ -12,7 +12,7 @@ const User = (props) => {
   });
 
   if (!userData) {
-    return <h3>.....Snake Loading</h3>;
+    return <h3>.....Snake Loading🍎 🐍</h3>;
   }
   console.log(userData);
   return (
