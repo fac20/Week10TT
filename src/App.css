@@ -1,6 +1,6 @@
 :root {
   --primary-font-colour: hsl(177, 85%, 22%);
-  --font-colour:hsl(177, 70%, 41%);
+  --font-colour: hsl(177, 70%, 41%);
   --bg-colour: hsl(180, 38%, 91%);
   --disabled-colour: hsl(0, 0%, 37%);
   --title-font: "PT Serif", serif;
@@ -11,8 +11,17 @@
   text-align: center;
 }
 
+#avatar {
+  height: 40vmin;
+  box-shadow: 0 4px 8px 0 hsla(0, 0%, 0%, 0.2),
+    0 6px 20px 0 hsla(0, 0%, 0%, 0.19);
+  border-radius: 50%;
+}
+
 .App-logo {
   height: 40vmin;
+  box-shadow: 0 4px 8px 0 hsla(0, 0%, 0%, 0.2),
+    0 6px 20px 0 hsla(0, 0%, 0%, 0.19);
   pointer-events: none;
 }
 
