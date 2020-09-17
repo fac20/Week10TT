@@ -1,15 +1,17 @@
-import React, { useEffect } from "react";
-import User from "./user.js";
-import "./App.css";
+import React from "react";
+import userData from "./user.js";
+import ReactLogo from "../react.png";
+import Blank from "../blank.png";
+import "../App.css";
 
-const SnakeGrid = () => {
-  const height = 15;
-  const width = 15;
+const SnakeGrid = (props) => {
+  const height = 14;
+  const width = 14;
   let initialRows = [];
   for (let i = 0; i < height; i++) {
     initialRows.push([]);
     for (let k = 0; k < width; k++) {
-      initialRows[i].pusk("blank");
+      initialRows[i].push("blank");
     }
   }
 
@@ -21,15 +23,16 @@ const SnakeGrid = () => {
     return position;
   };
 
-  const [rows, setRows] = useState(initialRows);
-  const [snake, setSnake] = useState([
+  const [rows, setRows] = React.useState(initialRows);
+  const [snake, setSnake] = React.useState([
     { x: 0, y: 0 },
     { x: 1, y: 0 },
   ]);
-  const [direct, setDirection] = useState("right");
-  const [apple, setApple] = useState(randomPosition);
+  const [direction, setDirection] = React.useState("right");
+  const [reactlogo, setReactlogo] = React.useState(randomPosition);
 
   const changeDirectionWithKeys = (e) => {
+    e.preventDefault();
     const { keyCode } = e;
     switch (keyCode) {
       case 37:
@@ -56,7 +59,7 @@ const SnakeGrid = () => {
     snake.forEach((cell) => {
       newRows[cell.x][cell.y] = "snake";
     });
-    newRows[apple.x][apple.y] = "apple";
+    newRows[reactlogo.x][reactlogo.y] = "reactlogo";
     setRows(newRows);
   };
 
@@ -75,12 +78,12 @@ const SnakeGrid = () => {
       case "bottom":
         newSnake.push({ x: (snake[0].x + 1) % height, y: snake[0].y });
     }
-    snewSnake.forEach((cell) => {
+    snake.forEach((cell) => {
       newSnake.push(cell);
     });
-    if (snake[0].x === apple.x && snake[0].y === apple.y) {
-      //checks if snake is eating apple
-      setApple(randomPosition); // if so, move apple
+    if (snake[0].x === reactlogo.x && snake[0].y === reactlogo.y) {
+      //checks if snake is eating reactlogo
+      setReactlogo(randomPosition); // if so, move reactlogo
     } else {
       newSnake.pop(); //removes last element in snake array and returns trimmed array
     }
@@ -91,14 +94,14 @@ const SnakeGrid = () => {
   useInterval(moveSnake, 100); // npm package that sets delay before callback
 
   function useInterval(callback, delay) {
-    const savedCallback = useRef();
+    const savedCallback = React.useRef();
 
-    useEffect(() => {
+    React.useEffect(() => {
       savedCallback.current = callback;
     }, [callback]);
 
     // Set up interval - setInterval may need importing
-    useEffect(() => {
+    React.useEffect(() => {
       function tick() {
         savedCallback.current();
       }
@@ -112,13 +115,16 @@ const SnakeGrid = () => {
   const displayRows = rows.map((row) => (
     <li>
       {row.map((e) => {
+        // eslint-disable-next-line default-case
         switch (e) {
           case "blank":
-            return <img src={Blank} />;
+            return <img className="blank__sq" alt="" src={Blank} />;
           case "snake":
-            return <img src={userData.avatar_url} />;
-          case "apple":
-            return <span>a</span>;
+            return <img alt="s" className="grid__item" src={props.face} />;
+          case "reactlogo":
+            return (
+              <img className="grid__item" alt="react logo" src={ReactLogo} />
+            );
         }
       })}
     </li>

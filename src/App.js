@@ -4,12 +4,13 @@ import FormSection from "./components/form";
 import User from "./components/user";
 import { SnakeGrid } from "./components/snakegrid";
 import "./App.css";
-import { getData } from "./utils/dataapi";
+// import { getData } from "./utils/dataapi";
 
 //  "https://api.github.com";
 
 function App() {
   const [userInput, setUserInput] = React.useState("");
+  const [userData, setUserData] = React.useState(null);
 
   // >>> tutorial with time stamp https://youtu.be/aGiPMygfMM4?t=796
   // const handleSubmit = () => {};
@@ -20,7 +21,8 @@ function App() {
         <div id="logoid">
           <img
             src={snake}
-            alt="Picture of snake logo"
+            className="app__logo"
+            alt="snake logo"
             width="250em"
             height="250em"
           />
@@ -28,11 +30,16 @@ function App() {
       </header>
       <main>
         <FormSection setUserInput={setUserInput} />
-        {userInput ? <User userInput={userInput} /> : null};
-        <div className="snake-container">
-          <div className="grid">
-            <SnakeGrid />
-          </div>
+        {userInput ? (
+          <User
+            userInput={userInput}
+            userData={userData}
+            setUserData={setUserData}
+          />
+        ) : null}
+
+        <div id="Container">
+          {userData ? <SnakeGrid face={userData.avatar_url} /> : null}
         </div>
       </main>
     </div>

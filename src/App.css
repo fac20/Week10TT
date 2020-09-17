@@ -1,56 +1,80 @@
 :root {
-  --primary-font-colour: hsl(177, 85%, 22%);
-  --font-colour: hsl(177, 70%, 41%);
-  --bg-colour: hsl(180, 38%, 91%);
+  --primary-font-colour: hsl(192, 85%, 22%);
+  --font-colour: hsl(192, 95%, 68%), 95%, 68%;
+  --bg-colour: hsl(192, 50%, 91%);
   --disabled-colour: hsl(0, 0%, 37%);
   --title-font: "PT Serif", serif;
   --main-font: "arial";
 }
 
+* {
+  box-sizing: border-box;
+}
+
+main {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+label,
+input,
+button {
+  font: inherit;
+  color: inherit;
+}
 .App {
   text-align: center;
 }
 
+/* remove styling from list */
+
+li {
+  list-style-type: none;
+  margin: auto;
+  justify-content: center;
+  padding: 0;
+  display: flex;
+}
+
 #avatar {
-  height: 40vmin;
+  height: 20vmin;
+  margin: 2rem;
   box-shadow: 0 4px 8px 0 hsla(0, 0%, 0%, 0.2),
     0 6px 20px 0 hsla(0, 0%, 0%, 0.19);
   border-radius: 50%;
 }
 
-.App-logo {
+ul {
+  border-color: var(--primary-font-colour);
+  margin: 0;
+  padding: 0;
+}
+#Container {
+  border: 10px black;
+}
+.grid__item {
+  height: 2rem;
+  width: 2rem;
+}
+
+.blank__sq {
+  opacity: 0;
+  height: 1rem;
+  width: 1rem;
+}
+.app__logo {
   height: 40vmin;
-  box-shadow: 0 4px 8px 0 hsla(0, 0%, 0%, 0.2),
-    0 6px 20px 0 hsla(0, 0%, 0%, 0.19);
-  pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.snakehead {
+  background-color: var(--font-colour);
 }
 
-/* .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-} */
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
