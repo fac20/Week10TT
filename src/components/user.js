@@ -12,12 +12,12 @@ const User = (props) => {
   });
 
   if (!userData) {
-    return <h3>.....Snake Loading🍎 🐍</h3>;
+    return <h3>.....Snake Loading</h3>;
   }
   console.log(userData);
   return (
     <section id="profile-card">
-      <img id="avatar" src={userData.avatar_url} />
+      <img id="avatar" alt="Githib user avatar" src={userData.avatar_url} />
       <h1 id="name">{userData.login}</h1>
     </section>
   );
