@@ -20,7 +20,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 ### Netlify Link
 
 
-[Snake Game :snake:](https://optimistic-meitner-fd247f.netlify.app/)
+[Snake Game :snake:](https://snackonreact.netlify.app/)
 
 
 ## Wireframe
