@@ -1,4 +1,4 @@
-import Username from "../App.js";
+import username from "../App.js";
 
 const checkResponse = (response) => {
   if (!response.ok) throw new Error(`Network error: ${response.status}`);

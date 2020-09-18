@@ -4,6 +4,7 @@ import FormSection from "./components/form";
 import User from "./components/user";
 import { SnakeGrid } from "./components/snakegrid";
 import "./App.css";
+
 // import { getData } from "./utils/dataapi";
 
 //  "https://api.github.com";
@@ -19,13 +20,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <div id="logoid">
-          <img
-            src={snake}
-            className="app__logo"
-            alt="snake logo"
-            width="250em"
-            height="250em"
-          />
+          <img src={snake} className="app__logo" alt="snake logo" />
         </div>
       </header>
       <main>
@@ -38,7 +33,7 @@ function App() {
           />
         ) : null}
 
-        <div id="Container">
+        <div className="Container">
           {userData ? <SnakeGrid face={userData.avatar_url} /> : null}
         </div>
       </main>

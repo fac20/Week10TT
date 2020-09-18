@@ -1,12 +1,12 @@
+/* eslint-disable default-case */
 import React from "react";
-import userData from "./user.js";
 import ReactLogo from "../react.png";
 import Blank from "../blank.png";
 import "../App.css";
 
 const SnakeGrid = (props) => {
-  const height = 14;
-  const width = 14;
+  const height = 12;
+  const width = 12;
   let initialRows = [];
   for (let i = 0; i < height; i++) {
     initialRows.push([]);
@@ -83,7 +83,7 @@ const SnakeGrid = (props) => {
     });
     if (snake[0].x === reactlogo.x && snake[0].y === reactlogo.y) {
       //checks if snake is eating reactlogo
-      setReactlogo(randomPosition); // if so, move reactlogo
+      setReactlogo(randomPosition); // if so, move reactlogo and put it somewhere else
     } else {
       newSnake.pop(); //removes last element in snake array and returns trimmed array
     }
@@ -93,6 +93,7 @@ const SnakeGrid = (props) => {
 
   useInterval(moveSnake, 100); // npm package that sets delay before callback
 
+  // Set up interval - imported setInterval for this
   function useInterval(callback, delay) {
     const savedCallback = React.useRef();
 
@@ -100,7 +101,8 @@ const SnakeGrid = (props) => {
       savedCallback.current = callback;
     }, [callback]);
 
-    // Set up interval - setInterval may need importing
+    //tick function runs every 100ms,
+    //take the current direction of the motion, and then will move the snake’s head in that direction
     React.useEffect(() => {
       function tick() {
         savedCallback.current();
@@ -120,10 +122,16 @@ const SnakeGrid = (props) => {
           case "blank":
             return <img className="blank__sq" alt="" src={Blank} />;
           case "snake":
-            return <img alt="s" className="grid__item" src={props.face} />;
+            return (
+              <img
+                alt="github avatar"
+                className="snakey__snake"
+                src={props.face}
+              />
+            );
           case "reactlogo":
             return (
-              <img className="grid__item" alt="react logo" src={ReactLogo} />
+              <img className="snake__food" alt="react logo" src={ReactLogo} />
             );
         }
       })}
@@ -131,7 +139,7 @@ const SnakeGrid = (props) => {
   ));
 
   return (
-    <div>
+    <div style={{ border: "10px", padding: "0px" }}>
       <ul>{displayRows}</ul>
     </div>
   );

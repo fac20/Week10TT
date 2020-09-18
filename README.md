@@ -49,6 +49,15 @@ https://github.com/sofiapoh/react-dynamic-data-workshop
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## useInterval
+
+Javascript’s initial setInterval wasn't great with hooks so we've used [useInterval](https://github.com/donavon/use-interval), a custom React Hook that provides a declarative setInterval.
+
+`useInterval(callback, delay);`
+
+It takes a `callback` parameter, function that will be called every `delay` milliseconds
+This `delay` parameter is a number representing the delay in msecs. Set to null to "pause" the interval.
+
 ## Available Scripts
 
 In the project directory, you can run:
