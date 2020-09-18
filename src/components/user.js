@@ -1,5 +1,4 @@
 import React from "react";
-import "../App.css";
 import getData from "../utils/dataapi.js";
 import loading from "../snake-game-logo.png";
 

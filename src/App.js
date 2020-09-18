@@ -26,6 +26,11 @@ function App() {
       <main>
         {!userInput && <FormSection setUserInput={setUserInput} />}
 
+        {/*It works because in JavaScript, true && expression always evaluates to expression, 
+        and false && expression always evaluates to false. Therefore, if the condition is true, 
+        the element right after && will appear in the output. If it is false, 
+        React will ignore and skip it.*/}
+
         {userInput ? (
           <User
             userInput={userInput}
@@ -36,7 +41,6 @@ function App() {
 
         {userData ? (
           <div className="Container">
-            {" "}
             <SnakeGrid face={userData.avatar_url} />
           </div>
         ) : null}

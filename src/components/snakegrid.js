@@ -2,7 +2,6 @@
 import React from "react";
 import ReactLogo from "../react.png";
 import Blank from "../blank.png";
-import "../App.css";
 
 const SnakeGrid = (props) => {
   const height = 12;
@@ -138,7 +137,11 @@ const SnakeGrid = (props) => {
     </li>
   ));
 
-  return <ul>{displayRows}</ul>;
+  return (
+    <div className="playContainer">
+      <ul>{displayRows}</ul>
+    </div>
+  );
 };
 
 export { SnakeGrid };

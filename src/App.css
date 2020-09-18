@@ -50,7 +50,6 @@ li {
   margin: auto;
   justify-content: center;
   padding: 0;
-  display: flex;
 }
 
 p {
@@ -64,15 +63,18 @@ p {
   border-radius: 50%;
 }
 
-.Container {
-  margin: 1rem;
+.playContainer {
+  display: flex;
+  margin: auto;
   padding: 2rem;
   border: 3px solid hsl(0, 0%, 100%);
   background: hsl(0, 0%, 100%);
   box-shadow: 0 4px 8px 0 hsla(0, 0%, 0%, 0.2),
     0 6px 20px 0 hsla(0, 0%, 0%, 0.19);
+  min-width: 460px;
+  max-width: 600px;
+  justify-content: center;
 }
-
 .snakey__snake {
   height: 2.4rem;
   width: 2.4rem;
@@ -97,11 +99,16 @@ p {
   padding: 2.4vmin;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 460px) {
   .App {
     width: auto;
   }
   .Container {
+    min-width: 200px;
+  }
+  .snake__food,
+  .app__logo,
+  .blank__sq {
     width: auto;
   }
 }
