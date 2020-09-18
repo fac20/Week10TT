@@ -6,15 +6,15 @@
   --title-font: "PT Serif", serif;
   --main-font: "arial";
 }
-
+/* 
 * {
   box-sizing: border-box;
-}
+} */
 body {
   background: linear-gradient(
     180deg,
-    hsla(192, 100%, 78%, 0.604) 25%,
-    hsl(0, 0%, 100%) 50%
+    hsla(192, 94%, 79%, 0.507) 30%,
+    hsl(0, 0%, 100%) 90%
   );
   background-repeat: no-repeat;
 }
@@ -31,7 +31,6 @@ button {
   color: inherit;
   justify-content: center;
   padding: 1vmin;
-  height: auto;
   margin: 0.6vmin;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -65,14 +64,15 @@ p {
   border-radius: 50%;
 }
 
-ul {
-  border-color: var(--primary-font-colour);
-  margin: 0;
-  padding: 0;
-}
 .Container {
-  border: 10px black;
+  margin: 1rem;
+  padding: 2rem;
+  border: 3px solid hsl(0, 0%, 100%);
+  background: hsl(0, 0%, 100%);
+  box-shadow: 0 4px 8px 0 hsla(0, 0%, 0%, 0.2),
+    0 6px 20px 0 hsla(0, 0%, 0%, 0.19);
 }
+
 .snakey__snake {
   height: 2.4rem;
   width: 2.4rem;
@@ -99,6 +99,9 @@ ul {
 
 @media only screen and (max-width: 600px) {
   .App {
+    width: auto;
+  }
+  .Container {
     width: auto;
   }
 }

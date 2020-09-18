@@ -138,11 +138,7 @@ const SnakeGrid = (props) => {
     </li>
   ));
 
-  return (
-    <div style={{ border: "10px", padding: "0px" }}>
-      <ul>{displayRows}</ul>
-    </div>
-  );
+  return <ul>{displayRows}</ul>;
 };
 
 export { SnakeGrid };

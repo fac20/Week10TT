@@ -24,7 +24,8 @@ function App() {
         </div>
       </header>
       <main>
-        <FormSection setUserInput={setUserInput} />
+        {!userInput && <FormSection setUserInput={setUserInput} />}
+
         {userInput ? (
           <User
             userInput={userInput}
@@ -33,9 +34,12 @@ function App() {
           />
         ) : null}
 
-        <div className="Container">
-          {userData ? <SnakeGrid face={userData.avatar_url} /> : null}
-        </div>
+        {userData ? (
+          <div className="Container">
+            {" "}
+            <SnakeGrid face={userData.avatar_url} />
+          </div>
+        ) : null}
       </main>
     </div>
   );
