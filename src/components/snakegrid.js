@@ -1,7 +1,7 @@
 /* eslint-disable default-case */
 import React from "react";
-import ReactLogo from "../react.png";
-import Blank from "../blank.png";
+import ReactLogo from "../images/react.png";
+import Blank from "../images/blank.png";
 
 const SnakeGrid = (props) => {
   const height = 12;

@@ -1,5 +1,5 @@
 import React from "react";
-import snake from "./snake.svg";
+import snake from "./images/snake.svg";
 import FormSection from "./components/form";
 import User from "./components/user";
 import { SnakeGrid } from "./components/snakegrid";

@@ -1,6 +1,6 @@
 import React from "react";
 import getData from "../utils/dataapi.js";
-import loading from "../snake-game-logo.png";
+import loading from "../images/snake-game-logo.png";
 
 const User = (props) => {
   // const [userInput, setUserInput] = React.useState("");
