@@ -83,7 +83,7 @@ This `delay` parameter is a number representing the delay in msecs. Set to null 
 
 ## Known issues 
 
-- Netlify link hasn't updated to the master bracnh - Any tips on this would be appreciated
+- Netlify link hasn't updated to the master branch - Any tips on this would be appreciated
 - A manual refresh is needed to restart the game
 
 
